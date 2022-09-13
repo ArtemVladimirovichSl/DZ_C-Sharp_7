@@ -13,9 +13,8 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     Console.WriteLine();
 }
 
-Console.Write("Введите позицию элемента по горизонтали: ");
+Console.WriteLine("Введите позиции элемента: ");
 int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите позицию элемента по вертикали: ");
 int b = Convert.ToInt32(Console.ReadLine());
 
 if (a > m || b > n) Console.WriteLine("Такой позиции в массиве нет");
