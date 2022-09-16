@@ -3,7 +3,7 @@ int line = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Задайте количество столбцов двумерного массива: ");
 int column = Convert.ToInt32(Console.ReadLine());
 
-double[,] matrix = new double[line, column];
+double[,] matrix = new double[line, column];   //создание массива с присвоением ему в качестве аргументов размеров матрицы
 
 for(int i = 0; i < matrix.GetLength(0); i++)
 {
