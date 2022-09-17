@@ -8,19 +8,17 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-    matrix[i,j] = Convert.ToInt32(new Random().Next(0,100));  
+    matrix[i,j] = new Random().Next(0,100);  
     Console.Write (matrix[i,j] + " ");
     }
     Console.WriteLine();
 }
 
 Console.Write("Введите позицию элемента по горизонтали: ");
-int x = Convert.ToInt32(Console.ReadLine());
+int numberLines = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите позицию элемента по вертикали: ");
-int y = Convert.ToInt32(Console.ReadLine());
-y -= 1;
-x -= 1;
+int numberColumn = Convert.ToInt32(Console.ReadLine());
 
-if(y < line && x < column) Console.WriteLine($"Значение элемента = {matrix.GetValue(y,x)}");
+if(numberColumn > column || numberLines > line) Console.WriteLine("Такого элемента в массиве нет");
 else
-Console.WriteLine("Такого элемента в массиве нет");
+Console.WriteLine($"Значение элемента = {matrix[numberColumn - 1, numberLines - 1]}");

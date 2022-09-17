@@ -15,11 +15,9 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 for (int j = 0; j < matrix.GetLength(1); j++) 
 {
     double summa = 0;
-    double average = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         summa += matrix[i, j];
     }
-    average = summa/line;
-    Console.WriteLine("Среднее арифметическое столбца "+(j+1)+" равно: "+"{0,6:F2}", average);
+    Console.WriteLine("Среднее арифметическое столбца "+(j+1)+" равно: "+ Math.Round(summa / matrix.GetLength(0), 2));
 }
